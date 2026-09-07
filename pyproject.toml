@@ -1,0 +1,19 @@
+[project]
+name = "camera-tracking-prototypes"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    # numpy already arrives transitively via opencv-python; pinned explicitly so
+    # the trackers' "no dependencies beyond numpy + opencv" claim is auditable
+    # rather than incidental.
+    "numpy>=2.5",
+    "opencv-python>=5.0.0.93",
+    "siyi-sdk[stream,stream-aiortsp,stream-opencv,web]",
+]
+
+[tool.uv.sources]
+siyi-sdk = { git = "https://github.com/mzahana/siyi_sdk.git", rev = "siyi-sdk-v2" }

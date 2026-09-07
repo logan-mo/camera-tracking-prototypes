@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Bench artifacts (regenerate with: python tools/make_test_videos.py --all)
+# Clips and their ground-truth sidecars are ignored together so they cannot drift apart.
+data/
+results/
+*.gt.cache.json
